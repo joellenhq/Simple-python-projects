@@ -2,6 +2,7 @@ from arithmetic_arranger import arithmetic_arranger
 from time_calculator import add_time
 import budget
 from budget import create_spend_chart
+import shape_calculator
 
 print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
 
@@ -28,3 +29,15 @@ print(food)
 print(clothing)
 
 print(create_spend_chart([food, clothing, auto]))
+
+rect = shape_calculator.Rectangle(5, 10)
+print(rect.get_area())
+rect.set_width(3)
+print(rect.get_perimeter())
+print(rect)
+
+sq = shape_calculator.Square(9)
+print(sq.get_area())
+sq.set_side(4)
+print(sq.get_diagonal())
+print(sq)
