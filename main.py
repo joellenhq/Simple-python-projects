@@ -3,6 +3,7 @@ from time_calculator import add_time
 import budget
 from budget import create_spend_chart
 import shape_calculator
+import prob_calculator
 
 print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
 
@@ -41,3 +42,13 @@ print(sq.get_area())
 sq.set_side(4)
 print(sq.get_diagonal())
 print(sq)
+
+prob_calculator.random.seed(95)
+hat = prob_calculator.Hat(blue=4, red=2, green=6)
+probability = prob_calculator.experiment(
+    hat=hat,
+    expected_balls={"blue": 2,
+                    "red": 1},
+    num_balls_drawn=4,
+    num_experiments=3000)
+print("Probability:", probability)
